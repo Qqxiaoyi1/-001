@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主控人登录验证</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:微软雅黑;}
+        body{background:#000;color:#fff;min-height:100vh;padding-bottom:90px;display:flex;align-items:center;justify-content:center;padding:20px;}
+        .login-box{width:100%;max-width:400px;background:rgba(15,15,15,0.9);border:1px solid #8b5cf6;border-radius:12px;padding:35px;}
+        .login-title{color:#60a5fa;font-size:1.5rem;text-align:center;margin-bottom:25px;}
+        .input-box{margin:18px 0;}
+        input{width:100%;padding:13px;border:1px solid #3b82f6;border-radius:8px;background:#111;color:#fff;outline:none;font-size:1rem;}
+        input:focus{border-color:#8b5cf6;box-shadow:0 0 10px rgba(139,92,246,0.3);}
+        .btn{width:100%;padding:13px;border:none;border-radius:8px;background:linear-gradient(#3b82f6,#8b5cf6);color:#fff;cursor:pointer;margin:8px 0;}
+        .back-btn{background:linear-gradient(#475569,#64748b);}
+        .master-mine-txt{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);color:#a78bfa;font-size:1rem;opacity:0.8;}
+        .footer-bar{position:fixed;bottom:0;left:0;right:0;height:70px;background:#111;border-top:1px solid #3b82f6;display:flex;align-items:center;justify-content:space-around;z-index:99;}
+        .footer-btn{color:#fff;font-size:1.2rem;border:none;background:transparent;cursor:pointer;padding:10px 30px;border-radius:6px;}
+        .footer-btn:hover{color:#60a5fa;}
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h3 class="login-title">主控人身份验证</h3>
+        <div class="input-box"><input type="text" id="user" placeholder="主控人账号"></div>
+        <div class="input-box"><input type="password" id="pwd" placeholder="主控人密码"></div>
+        <button class="btn" onclick="loginCheck()">登录后台</button>
+        <button class="btn back-btn" onclick="goBack()">返回首页</button>
+    </div>
+    <div class="master-mine-txt">我的</div>
+    <div class="footer-bar">
+        <button class="footer-btn" onclick="goBack()">首页</button>
+        <button class="footer-btn" onclick="goBack()">我的</button>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
